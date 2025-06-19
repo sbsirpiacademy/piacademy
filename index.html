@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Pi Academy | Math Tuition</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="icon" href="Pi_Academy_logo.png" type="image/png" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans&family=Poppins:wght@400;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+
+</head>
+<body class="light-mode">
+  <div id="loading-overlay">
+    <div class="spinner"></div>
+  </div>
+
+  <header>
+    <nav>
+      <div class="logo">
+        <a href="index.html">
+          <img src="Pi_Academy_logo.png" alt="Pi Academy Logo" class="navbar-logo">
+        </a>
+      </div>
+      <ul class="nav-links">
+        <li><a href="#hero">Home</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#courses">Courses</a></li>
+        <li><a href="#pyq">PYQ</a></li>
+        <li><a href="#testimonials">Testimonials</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+      <div class="mode-toggle">
+        <button id="theme-toggle"><i class="fas fa-moon"></i></button>
+      </div>
+      <div class="burger">
+        <div class="line1"></div>
+        <div class="line2"></div>
+        <div class="line3"></div>
+      </div>
+    </nav>
+  </header>
+  <main>
+    <section id="hero" class="hero-section">
+      <div class="hero-content">
+        <h1>Unlock Your Math Potential!</h1>
+        <p>Expert tuition for WBBSE & CBSE Classes 8-12. Learn concepts, crack exams.</p>
+        <p>WBJEE | JEE Main | JEE Advanced</p>
+        <p id="countdown">Enrollment closes in: <span id="time"></span></p>
+        <button class="cta-button" onclick="location.href='#contact'">Enroll Now</button>
+      </div>
+    </section>
+    <section id="about" class="about-section hidden">
+      <div class="container">
+        <h2>About Us</h2>
+        <div class="teacher-info">
+          <img src="teacher_pic.jpg" alt="Teacher Photo" class="teacher-pic">
+          <div class="teacher-details">
+            <h3>Sabyasachi Banerjee</h3>
+            <p class="designation">Founder & Lead Educator</p>
+            <p><i class="fas fa-graduation-cap"></i> M.Sc. Mathematics, B.Ed.</p>
+            <p><i class="fas fa-award"></i> 10+ Years of Teaching Experience</p>
+            <p>
+              Sabyasachi Banerjee is a highly experienced and dedicated mathematics educator with a passion for helping students achieve their full potential. With over a decade of experience, he has guided countless students through their academic journeys, consistently achieving excellent results in various board and competitive exams. His teaching philosophy focuses on building a strong conceptual foundation, fostering problem-solving skills, and instilling confidence in his students. He believes that every student has the potential to excel in mathematics with the right guidance and support. He is committed to creating a dynamic and engaging learning environment where complex mathematical concepts are made simple and accessible.
+            </p>
+            <button class="read-more-btn">Read More</button>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section id="courses" class="courses-section hidden">
+      <div class="container">
+        <h2>Our Courses</h2>
+        <div class="course-grid">
+          <div class="course-card">
+            <h3>WBBSE (Classes 8-10)</h3>
+            <ul>
+              <li>Comprehensive Syllabus Coverage</li>
+              <li>Regular Mock Tests</li>
+              <li>Doubt Clearing Sessions</li>
+              <li>Individual Attention</li>
+            </ul>
+            <a href="https://wa.me/919907713303?text=I%20want%20to%20join%20in%20WBBSE%20(Classes%208-10)%20batch" class="view-details-btn">View Details</a>
+          </div>
+          <div class="course-card">
+            <h3>CBSE (Classes 8-10)</h3>
+            <ul>
+              <li>NCERT & Exemplar Focus</li>
+              <li>Concept Building & Application</li>
+              <li>Chapter-wise Tests</li>
+              <li>Revision Classes</li>
+            </ul>
+            <a href="https://wa.me/919907713303?text=I%20want%20to%20join%20in%20CBSE%20(Classes%208-10)%20batch" class="view-details-btn">View Details</a>
+          </div>
+          <div class="course-card">
+            <h3>WBBSE (Classes 11-12)</h3>
+            <ul>
+              <li>Higher Secondary Curriculum</li>
+              <li>JEE Main Foundation</li>
+              <li>Advanced Problem Solving</li>
+              <li>Board Exam Preparation</li>
+            </ul>
+            <a href="https://wa.me/919907713303?text=I%20want%20to%20join%20in%20WBBSE%20(Classes%2011-12)%20batch" class="view-details-btn">View Details</a>
+          </div>
+          <div class="course-card">
+            <h3>CBSE (Classes 11-12)</h3>
+            <ul>
+              <li>JEE Main & Advanced Focus</li>
+              <li>Extensive Practice Problems</li>
+              <li>Previous Year Questions</li>
+              <li>Strategic Test Series</li>
+            </ul>
+            <a href="https://wa.me/919907713303?text=I%20want%20to%20join%20in%20CBSE%20(Classes%2011-12)%20batch" class="view-details-btn">View Details</a>
+          </div>
+          <div class="course-card">
+            <h3>WBJEE / JEE Main / JEE Advanced</h3>
+            <ul>
+              <li>Targeted Exam Preparation</li>
+              <li>Advanced Problem Solving</li>
+              <li>Mock Tests & Performance Analysis</li>
+              <li>Strategy & Time Management</li>
+            </ul>
+            <a href="https://wa.me/919907713303?text=I%20want%20to%20join%20in%20WBJEE%20%2F%20JEE%20Main%20%2F%20JEE%20Advanced%20batch" class="view-details-btn">View Details</a>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section id="pyq" class="pyq-section hidden">
+      <div class="container">
+        <h2>Previous Year Questions (PYQ)</h2>
+        <div class="pyq-filters">
+          <select id="board-select">
+            <option value="">Select Board</option>
+            <option value="wbbse">WBBSE</option>
+            <option value="cbse">CBSE</option>
+          </select>
+          <select id="class-select">
+            <option value="">Select Class</option>
+            <option value="8">Class 8</option>
+            <option value="9">Class 9</option>
+            <option value="10">Class 10</option>
+            <option value="11">Class 11</option>
+            <option value="12">Class 12</option>
+          </select>
+          <button id="filter-pyq-btn" class="cta-button">Filter PYQs</button>
+        </div>
+        <div class="pyq-results">
+          <p class="no-pyq-message">Select a board and class to see PYQs.</p>
+        </div>
+      </div>
+    </section>
+    <section id="testimonials" class="testimonials-section hidden">
+      <div class="container">
+        <h2>What Our Students Say</h2>
+        <div class="testimonial-carousel-container">
+          <button class="carousel-prev"><i class="fas fa-chevron-left"></i></button>
+          <div class="testimonial-carousel">
+            <div class="testimonial-card">
+              <p>"Pi Academy transformed my approach to Math. The concepts became so clear!"</p>
+              <h4>- Ananya S., Class 10 WBBSE</h4>
+            </div>
+            <div class="testimonial-card">
+              <p>"Excellent coaching for JEE. The mock tests were incredibly helpful."</p>
+              <h4>- Rohan M., JEE Aspirant</h4>
+            </div>
+            <div class="testimonial-card">
+              <p>"I finally understood calculus, thanks to the patient teaching here."</p>
+              <h4>- Priya D., Class 12 CBSE</h4>
+            </div>
+            <div class="testimonial-card">
+              <p>"The teachers are very supportive and make learning fun."</p>
+              <h4>- Aryan K., Class 9 CBSE</h4>
+            </div>
+          </div>
+          <button class="carousel-next"><i class="fas fa-chevron-right"></i></button>
+        </div>
+      </div>
+    </section>
+    <section id="contact" class="contact-section hidden">
+      <div class="container">
+        <h2>Contact Us</h2>
+        <div class="contact-details">
+          <p><i class="fas fa-map-marker-alt"></i> Chapadali, Nabapally, Barasat</p>
+          <p><i class="fas fa-phone"></i> +91 9907713303 / +91 8159910419</p>
+          <p><i class="fas fa-envelope"></i> sbsirpiacademy@gmail.com</p>
+          <div class="social-media">
+            <a href="https://www.facebook.com/profile.php?id=61573767593793"><i class="fab fa-facebook"></i></a>
+            <a href="https://www.instagram.com/sbsirpiacademy/?hl=en#"><i class="fab fa-instagram"></i></a>
+            <a href="https://wa.me/919907713303?text=Hello!%20I%20have%20a%20query%20about%20your%20classes."><i class="fab fa-whatsapp"></i></a>
+            <a href="https://youtube.com/@sbsirpiacademy?si=4u9kuOnvvUlHhEPq"><i class="fab fa-youtube"></i></a>
+          </div>
+        </div>
+        <h3>Send us a Message</h3>
+        <form class="contact-form" action="https://api.web3forms.com/submit" method="POST">
+          <input type="hidden" name="access_key" value="9928709c-c06d-4c65-bd69-3fac045c70a8" />
+          <input type="text" name="name" placeholder="Your Name" required />
+          <input type="email" name="email" placeholder="Your Email" required />
+          <input type="text" name="subject" placeholder="Subject" required />
+          <textarea name="message" rows="5" placeholder="Your Message" required></textarea>
+          <button type="submit" class="cta-button">Send Message</button>
+        </form>
+      </div>
+    </section>
+    <section id="testimonial-form" class="contact-section hidden">
+      <div class="container">
+        <h2>Submit Your Testimonial</h2>
+        <form class="contact-form" action="https://api.web3forms.com/submit" method="POST">
+          <input type="hidden" name="access_key" value="9928709c-c06d-4c65-bd69-3fac045c70a8" />
+          <input type="text" name="name" placeholder="Your Name" required />
+          <input type="text" name="class" placeholder="Your Class" required />
+          <textarea name="testimonial" rows="5" placeholder="Your feedback" required></textarea>
+          <button type="submit" class="cta-button">Submit</button>
+        </form>
+      </div>
+    </section>
+  </main>
+  <footer>
+    <div class="container">
+      <p>&copy; 2025 Pi Academy. All rights reserved.</p>
+      <p>Designed with ❤️ by Pi Academy</p>
+    </div>
+  </footer>
+  <script src="script.js"></script>
+  <script>
+        const deadline = new Date("2025-07-15").getTime();
+    setInterval(() => {
+      const now = new Date().getTime();
+      const t = deadline - now;
+      if (t >= 0) {
+        const days = Math.floor(t / (1000 * 60 * 60 * 24));
+        const hours = Math.floor((t % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+        const minutes = Math.floor((t % (1000 * 60 * 60)) / (1000 * 60));
+        document.getElementById("time").textContent = `${days}d ${hours}h ${minutes}m`;
+      }
+    }, 1000);
+
+    // Navigation smooth scroll and section show/hide
+    document.querySelectorAll('.nav-links a').forEach(link => {
+      link.addEventListener('click', function(e) {
+        const targetId = this.getAttribute('href').replace('#', '');
+        const section = document.getElementById(targetId);
+        if (section) {
+          e.preventDefault();
+          // Hide all sections with .hidden
+          document.querySelectorAll('main section').forEach(sec => {
+            sec.classList.add('hidden');
+          });
+          // Show the target section
+          section.classList.remove('hidden');
+          // Smooth scroll to the section
+          section.scrollIntoView({ behavior: 'smooth' });
+        }
+      });
+    });
+    // REMOVED THE OLD FAQ JAVASCRIPT FROM HERE. IT IS NOW HANDLED SOLELY BY script.js
+  </script>
+</body>
+</html>

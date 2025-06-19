@@ -1,0 +1,900 @@
+/* Basic Reset & Typography */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Add this to the top of your style.css if not present */
+html, body {
+    margin: 0;
+    padding: 0;
+    height: 100%; /* Ensure body takes full height */
+    min-height: 100vh; /* Ensure body is at least viewport height */
+    max-width: 100%;
+    overflow-x: hidden;
+}
+
+:root {
+    /* Light Mode Variables */
+    --body-bg: #ffffff;
+    --text-color: #333;
+    --heading-color: #2c3e50;
+    --header-bg: #ffffff;
+    --header-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    --nav-link-color: #555;
+    --nav-link-hover: #007bff;
+    /* --hero-gradient-start: rgba(181, 215, 251, 0.8);
+    --hero-gradient-end: rgba(0, 150, 255, 0.6); */
+    --hero-text-color: #000000;
+    --cta-button-bg: #ffc107;
+    --cta-button-text: #000000;
+    --section-bg-light: #fff;
+    --section-bg-dark: #f9f9f9;
+    --card-bg: #fff;
+    --card-shadow: 0 4px 10px rgba(0,0,0,0.05);
+    --primary-color: #007bff;
+    --secondary-color: #28a745; /* For view details button */
+    --border-color: #ddd;
+    --pyq-bg: #f0f8ff;
+    --pyq-border: #cceeff;
+    --pyq-li-bg: #e6f7ff;
+    --pyq-li-border-left: #007bff;
+    --footer-bg: #2c3e50;
+    --footer-text: #fff;
+    --burger-color: #333;
+    --read-more-border: #007bff;
+    --read-more-text: #007bff;
+    --read-more-hover-bg: #007bff;
+    --read-more-hover-text: #fff;
+    --input-focus-border: #007bff;
+
+    
+}
+
+/* Dark Mode Variables */
+body.dark-mode {
+    --body-bg: #1a1a2e;
+    --text-color: #e0e0e0;
+    --heading-color: #e0e0e0;
+    --header-bg: #16213e;
+    --header-shadow: 0 2px 5px rgba(0,0,0,0.3);
+    --nav-link-color: #bbbbbb;
+    --nav-link-hover: #007bff;
+    /* --hero-gradient-start: #1a1a2e;
+    --hero-gradient-end: #1a1a2e; */
+    --hero-text-color: #fff;
+    --cta-button-bg: #ffc107; /* Keep this bright */
+    --cta-button-text: #030000;
+    --section-bg-light: #20203a;
+    --section-bg-dark: #2c2c4e;
+    --card-bg: #2a2a4a;
+    --card-shadow: 0 4px 10px rgba(0,0,0,0.2);
+    --primary-color: #007bff; /* Keep primary blue */
+    --secondary-color: #28a745; /* Keep secondary green */
+    --border-color: #444;
+    --pyq-bg: #2a2a4a;
+    --pyq-border: #4a4a7a;
+    --pyq-li-bg: #3a3a5a;
+    --pyq-li-border-left: #007bff;
+    --footer-bg: #16213e;
+    --footer-text: #bbbbbb;
+    --burger-color: #e0e0e0; /* Change burger color in dark mode */
+    --read-more-border: #007bff;
+    --read-more-text: #007bff;
+    --read-more-hover-bg: #007bff;
+    --read-more-hover-text: #fff;
+    --input-focus-border: #007bff;
+
+}
+
+body {
+    font-family: 'DM Sans', sans-serif; /* DM Sans for body text */
+    line-height: 1.6;
+    color: var(--text-color);
+    background-color: var(--body-bg);
+    transition: background-color 0.3s ease, color 0.3s ease; /* Smooth theme transition */
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+h1, h2, h3 {
+    font-family: 'Poppins', sans-serif; /* Poppins for headings */
+    color: var(--heading-color);
+    margin-bottom: 20px;
+    text-align: center;
+    transition: color 0.3s ease;
+}
+
+a {
+    text-decoration: none;
+    color: var(--primary-color);
+    transition: color 0.3s ease;
+}
+
+a:hover {
+    color: var(--nav-link-hover);
+}
+
+/* Header & Navigation */
+header {
+    background: var(--header-bg);
+    padding: 15px 0;
+    box-shadow: var(--header-shadow);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    transition: background 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Styling for the new image logo */
+.navbar-logo {
+    height: 50px; /* Adjust height as needed */
+    width: auto; /* Maintain aspect ratio */
+    vertical-align: middle; /* Aligns with text if any, good for general alignment */
+    /* Remove any default link color that might apply to the image if not needed */
+    color: transparent; /* Makes sure no text color affects the image */
+}
+
+/* Ensure the logo container behaves correctly */
+.logo {
+    display: flex; /* Helps align the image if it's the only content */
+    align-items: center; /* Vertically centers the logo */
+}
+
+/* You might want to remove or adjust the font styles for the old text logo */
+.logo a {
+    /* font-family: 'Poppins', sans-serif; */ /* Comment out or remove if not needed for the image */
+    /* font-size: 1.8em; */
+    /* font-weight: bold; */
+    color: transparent; /* Hide text if still present or use display: none */
+}
+
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.logo a {
+    font-family: 'Poppins', sans-serif; /* Keep logo text in Poppins */
+    font-size: 1.8em;
+    font-weight: bold;
+    color: var(--heading-color);
+    transition: color 0.3s ease;
+}
+
+.nav-links {
+    display: flex;
+    list-style: none;
+}
+
+.nav-links li {
+    margin-left: 25px;
+}
+
+.nav-links a {
+    color: var(--nav-link-color);
+    font-weight: 500;
+    transition: color 0.3s ease;
+}
+
+.nav-links a:hover {
+    color: var(--nav-link-hover);
+}
+
+.burger {
+    display: none; /* Hidden on desktop */
+    cursor: pointer;
+}
+
+.burger div {
+    width: 25px;
+    height: 3px;
+    background-color: var(--burger-color);
+    margin: 5px;
+    transition: all 0.3s ease;
+}
+
+/* Mode Toggle Button Styling */
+.mode-toggle {
+    margin-left: 150px;
+}
+
+#theme-toggle {
+    background: none;
+    border: none;
+    font-size: 1.5em;
+    cursor: pointer;
+    color: var(--nav-link-color);
+    transition: color 0.3s ease, transform 0.2s ease;
+}
+
+#theme-toggle:hover {
+    color: var(--nav-link-hover);
+    transform: scale(1.1);
+}
+
+
+/* Hero Section */
+.hero-section {
+    /* background: linear-gradient(to right, var(--hero-gradient-start), var(--hero-gradient-end)), url('Pi_Academy_logo.png') no-repeat center center/cover; */
+    color: var(--hero-text-color);
+    text-align: center;
+    padding: 50px 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 50px;
+    position: relative;
+    overflow: hidden;
+    transition: background 0.5s ease; /* Transition for gradient */
+}
+
+
+
+.hero-content h1 {
+    font-family: 'Poppins', sans-serif; /* Explicitly set for hero heading */
+    font-size: 3.5em;
+    margin-bottom: 20px;
+    color: var(--hero-text-color);
+    animation: fadeInDown 1s ease-out; /* Initial animation */
+}
+
+.hero-content p {
+    font-size: 1.3em;
+    margin-bottom: 40px;
+    animation: fadeInUp 1s ease-out 0.3s forwards; /* Initial animation with delay */
+    opacity: 0; /* Hidden until animated */
+}
+
+.cta-button {
+    background: var(--cta-button-bg);
+    color: var(--cta-button-text);
+    padding: 15px 30px;
+    border: none;
+    border-radius: 5px;
+    font-size: 1.1em;
+    cursor: pointer;
+    transition: background 0.3s ease, transform 0.3s ease;
+    animation: scaleIn 0.8s ease-out 0.6s forwards; /* Initial animation with delay */
+    opacity: 100; /* Hidden until animated */
+}
+
+.cta-button:hover {
+    background: #e0a800; /* Keep hover color consistent */
+    transform: translateY(-3px) scale(1.02);
+}
+
+/* Sections - General Hidden/Visible for Scroll Animation */
+section.hidden {
+    opacity: 0;
+    transform: translateY(50px);
+    transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+}
+
+section.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* About Section */
+.about-section {
+    padding: 60px 0;
+    background-color: var(--section-bg-light);
+    transition: background-color 0.3s ease;
+}
+
+.teacher-info {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.teacher-pic {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 5px solid var(--primary-color);
+    margin-bottom: 20px;
+    transition: transform 0.3s ease, border-color 0.3s ease;
+}
+
+.teacher-pic:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 15px rgba(0, 123, 255, 0.5); /* Subtle glow on hover */
+}
+
+.teacher-details {
+    max-width: 700px;
+}
+
+.teacher-details h3 {
+    font-family: 'Poppins', sans-serif; /* Explicitly set for consistency */
+    font-size: 2em;
+    color: var(--heading-color);
+    margin-bottom: 10px;
+}
+
+.teacher-details .designation {
+    font-style: italic;
+    color: var(--nav-link-color);
+    margin-bottom: 15px;
+}
+
+.teacher-details p {
+    margin-bottom: 10px;
+}
+
+.teacher-details i {
+    margin-right: 8px;
+    color: var(--primary-color);
+}
+
+.read-more-btn {
+    background: none;
+    border: 1px solid var(--read-more-border);
+    color: var(--read-more-text);
+    padding: 8px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    margin-top: 15px;
+}
+
+.read-more-btn:hover {
+    background: var(--read-more-hover-bg);
+    color: var(--read-more-hover-text);
+    transform: scale(1.05);
+}
+
+/* Courses Section */
+.courses-section {
+    padding: 60px 0;
+    background-color: var(--section-bg-dark);
+    transition: background-color 0.3s ease;
+}
+
+.course-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 30px;
+}
+
+.course-card {
+    background: var(--card-bg);
+    border-radius: 10px;
+    box-shadow: var(--card-shadow);
+    padding: 30px;
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease, background 0.3s ease;
+}
+
+.course-card:hover {
+    transform: translateY(-8px); /* More pronounced lift */
+    box-shadow: 0 12px 25px rgba(0,0,0,0.15); /* Stronger shadow */
+}
+
+.course-card h3 {
+    font-family: 'Poppins', sans-serif; /* Explicitly set for consistency */
+    color: var(--primary-color);
+    font-size: 1.8em;
+    margin-bottom: 15px;
+}
+
+.course-card ul {
+    list-style: none;
+    margin-bottom: 20px;
+}
+
+.course-card ul li {
+    margin-bottom: 8px;
+    color: var(--nav-link-color);
+    position: relative;
+    padding-left: 20px;
+}
+
+.course-card ul li::before {
+    content: "\f058"; /* Font Awesome check-circle icon */
+    font-family: "Font Awesome 5 Free";
+    font-weight: 900;
+    color: var(--secondary-color); /* Green checkmark */
+    position: absolute;
+    left: 0;
+    top: 0;
+}
+
+.view-details-btn {
+    background: var(--secondary-color);
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background 0.3s ease, transform 0.3s ease;
+}
+
+.view-details-btn:hover {
+    background: #218838;
+    transform: scale(1.05);
+}
+
+/* PYQ Section */
+.pyq-section {
+    padding: 60px 0;
+    background-color: var(--section-bg-light);
+    transition: background-color 0.3s ease;
+}
+
+.pyq-filters {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    margin-bottom: 30px;
+    flex-wrap: wrap;
+}
+
+.pyq-filters select, .pyq-filters button {
+    padding: 10px 15px;
+    border-radius: 5px;
+    border: 1px solid var(--border-color);
+    font-size: 1em;
+    background-color: var(--card-bg);
+    color: var(--text-color);
+    transition: background-color 0.3s ease, border-color 0.3s ease, color 0.3s ease;
+}
+
+.pyq-filters select:focus, .pyq-filters button:focus,
+.contact-form input:focus, .contact-form textarea:focus {
+    outline: none;
+    border-color: var(--input-focus-border);
+    box-shadow: 0 0 0 3px rgba(0, 123, 255, 0.25); /* Focus ring */
+}
+
+
+#filter-pyq-btn {
+    background: var(--primary-color);
+    color: #fff;
+    cursor: pointer;
+    transition: background 0.3s ease, transform 0.2s ease;
+}
+
+#filter-pyq-btn:hover {
+    background: #0056b3;
+    transform: translateY(-2px);
+}
+
+.pyq-results {
+    min-height: 150px;
+    background-color: var(--pyq-bg);
+    border: 1px dashed var(--pyq-border);
+    border-radius: 8px;
+    padding: 20px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    transition: background-color 0.3s ease, border-color 0.3s ease;
+}
+
+.pyq-results ul {
+    list-style: none;
+    padding: 0;
+    width: 100%;
+}
+
+.pyq-results ul li {
+    background: var(--pyq-li-bg);
+    padding: 12px 15px;
+    margin-bottom: 10px;
+    border-radius: 5px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-left: 5px solid var(--pyq-li-border-left);
+    transition: background 0.3s ease, border-color 0.3s ease, transform 0.2s ease;
+}
+
+.pyq-results ul li:hover {
+    transform: translateX(5px); /* Slide on hover */
+}
+
+.pyq-results ul li a {
+    font-weight: 500;
+    color: var(--primary-color);
+}
+
+.pyq-results ul li a:hover {
+    color: var(--nav-link-hover);
+}
+
+.no-pyq-message {
+    color: var(--nav-link-color);
+    font-style: italic;
+}
+
+/* Testimonials Section */
+.testimonials-section {
+    padding: 60px 0;
+    background-color: var(--section-bg-dark);
+    position: relative;
+    overflow: hidden;
+    transition: background-color 0.3s ease;
+}
+
+.testimonial-carousel {
+    display: flex;
+    overflow-x: hidden;
+    scroll-behavior: smooth;
+    -webkit-overflow-scrolling: touch;
+    width: 100%;
+    justify-content: flex-start; /* Align left for scroll */
+    gap: 20px;
+    padding-bottom: 20px;
+}
+
+.testimonial-card {
+    background: var(--card-bg);
+    border-radius: 10px;
+    box-shadow: var(--card-shadow);
+    padding: 30px;
+    flex: 0 0 calc(50% - 10px); /* 50% width minus half the gap */
+    max-width: 500px;
+    text-align: center;
+    box-sizing: border-box;
+    transition: background 0.3s ease, box-shadow 0.3s ease, transform 0.2s ease;
+}
+
+.testimonial-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 15px rgba(0,0,0,0.1);
+}
+
+
+.testimonial-card p {
+    font-style: italic;
+    margin-bottom: 15px;
+    color: var(--nav-link-color);
+    font-size: 1.1em;
+}
+
+.testimonial-card h4 {
+    font-family: 'Poppins', sans-serif; /* Explicitly set for consistency */
+    color: var(--primary-color);
+    font-weight: 600;
+}
+
+.carousel-prev, .carousel-next {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: rgba(0, 0, 0, 0.5);
+    color: #fff;
+    border: none;
+    padding: 10px 15px;
+    cursor: pointer;
+    font-size: 1.5em;
+    border-radius: 5px;
+    z-index: 10;
+    transition: background 0.3s ease, transform 0.2s ease;
+}
+
+.carousel-prev:hover, .carousel-next:hover {
+    background: rgba(0, 0, 0, 0.7);
+    transform: translateY(-50%) scale(1.1);
+}
+
+.carousel-prev {
+    left: 10px;
+}
+
+.carousel-next {
+    right: 10px;
+}
+
+/* Contact Section */
+.contact-section {
+    padding: 60px 0;
+    background-color: var(--section-bg-light);
+    transition: background-color 0.3s ease;
+}
+
+.contact-details {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.contact-details p {
+    margin-bottom: 10px;
+    font-size: 1.1em;
+}
+
+.contact-details i {
+    margin-right: 10px;
+    color: var(--primary-color);
+}
+
+.social-media a {
+    font-size: 1.8em;
+    margin: 0 10px;
+    color: var(--primary-color);
+    transition: color 0.3s ease, transform 0.2s ease;
+}
+
+.social-media a:hover {
+    color: var(--nav-link-hover);
+    transform: scale(1.2); /* Pop effect on social icons */
+}
+
+.contact-form {
+    max-width: 600px;
+    margin: 0 auto;
+    background: var(--section-bg-dark);
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: var(--card-shadow);
+    transition: background 0.3s ease, box-shadow 0.3s ease;
+}
+
+.contact-form h3 {
+    font-family: 'Poppins', sans-serif; /* Explicitly set for consistency */
+    margin-bottom: 25px;
+    color: var(--heading-color);
+}
+
+.contact-form input, .contact-form textarea {
+    width: 100%;
+    padding: 12px;
+    margin-bottom: 20px;
+    border: 1px solid var(--border-color);
+    border-radius: 5px;
+    font-size: 1em;
+    background-color: var(--card-bg);
+    color: var(--text-color);
+    transition: background-color 0.3s ease, border-color 0.3s ease, color 0.3s ease;
+}
+
+.contact-form textarea {
+    resize: vertical;
+}
+
+.contact-form .cta-button {
+    width: auto;
+    display: block;
+    margin: 0 auto;
+}
+
+/* Footer */
+footer {
+    background: var(--footer-bg);
+    color: var(--footer-text);
+    text-align: center;
+    padding: 8px 0;
+    font-size: 0.95em;
+    transition: background 0.3s ease, color 0.3s ease;
+}
+
+footer p {
+    margin-bottom: 2px;
+}
+
+footer a {
+    color: var(--footer-text);
+    text-decoration: underline;
+    font-size: inherit;
+}
+
+/* Responsive Design */
+/* GLOBAL FIX */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html, body {
+  margin: 0;
+  padding: 0;
+  max-width: 100%;
+  overflow-x: hidden;
+}
+
+/* Responsive Design */
+@media (max-width: 480px) {
+  .nav-links {
+    position: absolute;
+    right: 0;
+    top: 80px;
+    height: calc(100vh - 80px);
+    background-color: var(--header-bg);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 60%;
+    transform: translateX(100%);
+    transition: transform 0.5s ease-in;
+    padding-top: 30px;
+    box-shadow: -2px 0 5px var(--header-shadow);
+    max-width: 100vw;
+    overflow-x: hidden;
+  }
+
+  .nav-links li {
+    opacity: 0;
+    margin: 20px 0;
+    width: 100%;
+    text-align: center;
+  }
+
+  .burger {
+    display: block;
+  }
+
+  .nav-active {
+    transform: translateX(0%);
+  }
+
+  .nav-active li {
+    animation: navLinkFade 0.5s ease forwards 0.3s;
+  }
+
+  .toggle .line1 {
+    transform: rotate(-45deg) translate(-5px, 6px);
+  }
+  .toggle .line2 {
+    opacity: 0;
+  }
+  .toggle .line3 {
+    transform: rotate(45deg) translate(-5px, -6px);
+  }
+
+  .hero-content h1 {
+    font-size: 2.5em;
+  }
+
+  .hero-content p {
+    font-size: 1em;
+  }
+
+  .teacher-info {
+    flex-direction: column;
+  }
+
+  .course-card {
+    padding: 20px;
+  }
+
+  .testimonial-carousel {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .testimonial-card {
+    flex: 0 0 90%;
+    margin-bottom: 20px;
+  }
+
+  .carousel-prev, .carousel-next {
+    display: none;
+  }
+
+  .pyq-filters {
+    flex-direction: column;
+    align-items: center;
+  }
+}
+
+
+/* Animations */
+@keyframes fadeInDown {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes scaleIn {
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+    from {
+        opacity: 0;
+        transform: scale(0.95);
+    }
+}
+
+@keyframes navLinkFade {
+    from {
+        opacity: 0;
+        transform: translateX(50px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0px);
+    }
+}
+
+/* Optional: Pulse effect on CTA button for extra pop */
+.cta-button.pulse {
+    animation: pulse 1.5s infinite;
+}
+
+@keyframes pulse {
+    0% {
+        box-shadow: 0 0 0 0 rgba(255, 193, 7, 0.7);
+    }
+    70% {
+        box-shadow: 0 0 0 10px rgba(255, 193, 7, 0);
+    }
+    100% {
+        box-shadow: 0 0 0 0 rgba(255, 193, 7, 0);
+    }
+}
+
+/* Loading Overlay */
+#loading-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: var(--body-bg); /* Use the body background color */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 9999; /* Ensure it's on top of everything */
+    transition: opacity 0.5s ease-out;
+}
+
+.spinner {
+    border: 8px solid var(--border-color); /* Light grey */
+    border-top: 8px solid var(--primary-color); /* Blue */
+    border-radius: 50%;
+    width: 60px;
+    height: 60px;
+    animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+/* Optional: Hide body content initially if preferred, but script.js will handle visibility */
+body.loading #loading-overlay {
+    opacity: 1;
+    visibility: visible;
+}
+
+body:not(.loading) #loading-overlay {
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none; /* Allows clicks on elements underneath once hidden */
+}
